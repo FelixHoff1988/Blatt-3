@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Beispiel: Der Unix Timestamp 1666742552 entspricht 152s nach Mitternacht}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Berechnet Sekunden seit Mitternacht des aktuellen Tags}
+\PYG{n+nf}{sec\PYGZus{}since\PYGZus{}midnight}\PYG{o+ow}{::} \PYG{k+kt}{Integer} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Integer} 
+\PYG{n+nf}{sec\PYGZus{}since\PYGZus{}midnight} \PYG{n}{unixtime} \PYG{o+ow}{=} \PYG{n}{mod} \PYG{n}{unixtime} \PYG{p}{(}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{24}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Berechnung der vollen vergangenen Tage zwischen zwei Zeitpunkten}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Beispiel: Zwischen 1666958062 und 1667231902 sind 3 volle Tage vergangen \PYGZhy{} Test bestanden :)}
+\PYG{n+nf}{full\PYGZus{}days\PYGZus{}between\PYGZus{}dates}\PYG{o+ow}{::} \PYG{k+kt}{Integer} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Integer} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Integer}
+\PYG{n+nf}{full\PYGZus{}days\PYGZus{}between\PYGZus{}dates} \PYG{n}{ut1} \PYG{n}{ut2} \PYG{o+ow}{=} \PYG{n}{div} \PYG{p}{(}\PYG{n}{ut1} \PYG{o}{\PYGZhy{}}\PYG{n}{ut2}\PYG{p}{)} \PYG{p}{(}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{24}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Berechnung der vergangenen vollen Stunden an einem Tag für einen Unix Timestamp in Deutschland}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Beispiel: Der Unix Timestamp 1666742552 entspricht 1 vergangenen Stunde}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}           Der Unix Timestamp 1666739552 entspricht 0 vergangenen Stunden}
+\PYG{n+nf}{full\PYGZus{}hours\PYGZus{}german}\PYG{o+ow}{::} \PYG{k+kt}{Integer} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Integer}
+\PYG{n+nf}{full\PYGZus{}hours\PYGZus{}german} \PYG{n}{unixtime} \PYG{o+ow}{=} \PYG{n}{div} \PYG{p}{(}\PYG{n}{sec\PYGZus{}since\PYGZus{}midnight} \PYG{p}{(}\PYG{n}{unixtime} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{60}\PYG{p}{)))} \PYG{p}{(}\PYG{l+m+mi}{60}\PYG{o}{*}\PYG{l+m+mi}{60}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}a function  that  receives  a rational  number valued }
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}length  in  km and returns  the  same length  in  miles. }
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}example : 2km  =  1.242742mi }
+\PYG{n+nf}{kmToMtle} \PYG{o+ow}{::} \PYG{k+kt}{Float}  \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Float} 
+\PYG{n+nf}{kmToMtle} \PYG{n}{x} \PYG{o+ow}{=} \PYG{n}{x} \PYG{o}{*} \PYG{l+m+mf}{0.621371} 
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}a  functton  that  receives  a rational  number valued }
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}length  tn  miles  and returns  the  same length  in  km. }
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}example: 2mi = 3.218688km }
+\PYG{n+nf}{mtleToKm} \PYG{o+ow}{::} \PYG{k+kt}{Float}  \PYG{o+ow}{\PYGZhy{}\PYGZgt{}}  \PYG{k+kt}{Float} 
+\PYG{n+nf}{mtleToKm} \PYG{n}{x} \PYG{o+ow}{=} \PYG{n}{x} \PYG{o}{*} \PYG{l+m+mf}{1.609344}
+\end{Verbatim}
